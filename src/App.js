@@ -5,11 +5,14 @@ import { FiSettings } from "react-icons/fi";
 
 import { Navbar, Sidebar } from "./components";
 import { Ecommerce } from './pages';
+
 import "./App.css";
+import { useStateContext } from "./contexts/ContextProvider";
 
 
 const App = () => {
-  const activeMenu = true;
+  const { activeMenu } = useStateContext();
+
   return (
     <div>
       <BrowserRouter>
