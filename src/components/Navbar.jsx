@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { AiOutlineMenu } from "react-icons/ai";
 import { FiShoppingCart } from "react-icons/fi";
 import { BsChatLeft } from "react-icons/bs";
@@ -29,7 +29,33 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 );
 
 const Navbar = () => {
-  const { activeMenu, setActiveMenu, isClicked, setIsClicked, handleClick } = useStateContext();
+  const {
+    activeMenu,
+    setActiveMenu,
+    isClicked,
+    setIsClicked,
+    handleClick,
+    screenSize,
+    setScreenSize,
+  } = useStateContext();
+
+  useEffect(() => {
+    const handleResize = () => setScreenSize(window.innerWidth);
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (screenSize <= 900) {
+      setActiveMenu(false);
+    } else {
+      setActiveMenu(true);
+    }
+  }, [screenSize]);
+
   return (
     <div className="flex justify-between p-2 md:mx-6 relative">
       <NavButton
@@ -67,9 +93,11 @@ const Navbar = () => {
             <img src={avatar} alt="avatar" className="rounded-full w-8 h-8" />
             <p>
               <span className="text-gray-400 text-14">Hi, </span>{" "}
-              <span className="text-gray-400 font-bold ml-1 text-14">Michael</span>
+              <span className="text-gray-400 font-bold ml-1 text-14">
+                Michael
+              </span>
             </p>
-            <MdKeyboardArrowDown className="text-gray-400 text-14"/>
+            <MdKeyboardArrowDown className="text-gray-400 text-14" />
           </div>
         </TooltipComponent>
         {isClicked.cart && <Cart />}
