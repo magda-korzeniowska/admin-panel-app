@@ -4,11 +4,10 @@ import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 import { FiSettings } from "react-icons/fi";
 
 import { Navbar, Sidebar } from "./components";
-import { Ecommerce } from './pages';
+import { Ecommerce } from "./pages";
 
 import "./App.css";
 import { useStateContext } from "./contexts/ContextProvider";
-
 
 const App = () => {
   const { activeMenu } = useStateContext();
@@ -44,13 +43,14 @@ const App = () => {
             <div className="fixed md:static bg-main-bg dark:bg-main-dark-bg navbar w-full">
               <Navbar />
             </div>
-          </div>
-          <div>
-            <Routes>
-              {/* Dashboard */}
-              <Route path='/' element={<Ecommerce />} />
-              <Route path='/ecommerce' element={<Ecommerce />} />
-            </Routes>
+
+            <div>
+              <Routes>
+                {/* Dashboard */}
+                <Route path="/" element={<Ecommerce />} />
+                <Route path="/ecommerce" element={<Ecommerce />} />
+              </Routes>
+            </div>
           </div>
         </div>
       </BrowserRouter>

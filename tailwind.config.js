@@ -1,3 +1,5 @@
+const { BiGame } = require("react-icons/bi");
+
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: 'class',
@@ -40,7 +42,7 @@ module.exports = {
       },
       backgroundImage: {
         'hero-pattern':
-          "url('https://i.ibb.co/MkvLDfb/Rectangle-4389.png')",
+          "url('/src/data/welcome-bg.svg')"
       },
     },
   },
