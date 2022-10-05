@@ -8,6 +8,7 @@ import {
   Calendar,
   Customers,
   Ecommerce,
+  Editor,
   Employees,
   Kanban,
   Orders,
@@ -65,6 +66,7 @@ const App = () => {
                 {/* apps  */}
                 <Route path="/calendar" element={<Calendar />} />
                 <Route path="/kanban" element={<Kanban />} />
+                <Route path="/editor" element={<Editor />} />
               </Routes>
             </div>
           </div>
