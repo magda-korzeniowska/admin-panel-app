@@ -5,14 +5,22 @@ import { FiSettings } from 'react-icons/fi';
 
 import { Navbar, Sidebar, ThemeSettings } from './components';
 import {
+  Area,
+  Bar,
   Calendar,
+  ColorMapping,
   ColorPicker,
   Customers,
   Ecommerce,
   Editor,
   Employees,
+  Financial,
   Kanban,
+  Line,
   Orders,
+  Pie,
+  Pyramid,
+  Stacked
 } from './pages';
 
 import './App.css';
@@ -73,6 +81,16 @@ const App = () => {
                 <Route path='/kanban' element={<Kanban />} />
                 <Route path='/editor' element={<Editor />} />
                 <Route path='/color-picker' element={<ColorPicker />} />
+
+                {/* charts  */}
+                <Route path="/line" element={<Line />} />
+                <Route path="/area" element={<Area />} />
+                <Route path="/bar" element={<Bar />} />
+                <Route path="/pie" element={<Pie />} />
+                <Route path="/financial" element={<Financial />} />
+                <Route path="/color-mapping" element={<ColorMapping />} />
+                <Route path="/pyramid" element={<Pyramid />} />
+                <Route path="/stacked" element={<Stacked />} />
               </Routes>
             </div>
           </div>
