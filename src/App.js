@@ -8,7 +8,6 @@ import {
   Area,
   Bar,
   Calendar,
-  ColorMapping,
   ColorPicker,
   Customers,
   Ecommerce,
@@ -20,6 +19,7 @@ import {
   Orders,
   Pie,
   Pyramid,
+  RangeColorMapping,
   Stacked
 } from './pages';
 
@@ -88,7 +88,7 @@ const App = () => {
                 <Route path="/bar" element={<Bar />} />
                 <Route path="/pie" element={<Pie />} />
                 <Route path="/financial" element={<Financial />} />
-                <Route path="/color-mapping" element={<ColorMapping />} />
+                <Route path="/range-color-mapping" element={<RangeColorMapping />} />
                 <Route path="/pyramid" element={<Pyramid />} />
                 <Route path="/stacked" element={<Stacked />} />
               </Routes>
