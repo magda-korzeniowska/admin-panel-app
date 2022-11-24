@@ -14,13 +14,24 @@ import {
 import { pieChartData } from '../../data/dummy';
 import { useStateContext } from '../../contexts/ContextProvider';
 
-const Doughnut = () => {
+const Doughnut = ({ id, legendVisibility, height }) => {
   const { currentMode } = useStateContext();
 
   return (
-    <AccumulationChartComponent tooltip={{ enable: true }}>
+    <AccumulationChartComponent
+      id={id}
+      legendSettings={{ visible: legendVisibility, background: 'white' }}
+      height={height}
+      background={currentMode === 'Dark' ? '#33373E' : '#fff'}
+      tooltip={{ enable: true }}
+    >
       <Inject
-        services={[PieSeries, AccumulationDataLabel, AccumulationLegend, AccumulationTooltip]}
+        services={[
+          PieSeries,
+          AccumulationDataLabel,
+          AccumulationLegend,
+          AccumulationTooltip,
+        ]}
       />
       <AccumulationSeriesCollectionDirective>
         <AccumulationSeriesDirective
@@ -29,7 +40,15 @@ const Doughnut = () => {
           innerRadius='40%'
           xName='x'
           yName='y'
-          dataLabel={{ visible: true, name: 'text' }}
+          dataLabel={{
+            visible: true,
+            name: 'text',
+            position: 'Inside',
+            font: {
+              fontWeight: '600',
+              color: '#fff',
+            },
+          }}
           explode
           explodeOffset='10%'
           explodeIndex={0}

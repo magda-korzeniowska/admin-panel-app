@@ -1,13 +1,26 @@
 import React from 'react';
 import { BsCurrencyDollar } from 'react-icons/bs';
 import { GoPrimitiveDot } from 'react-icons/go';
-import { Stacked, Pie, Button, SparkLine } from '../components';
+import { IoIosMore } from 'react-icons/io';
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
+import {
+  Stacked,
+  Doughnut as Pie,
+  Button,
+  LineChart,
+  SparkLine,
+} from '../components';
 import {
   earningData,
   SparklineAreaData,
   ecomPieChartData,
+  medicalproBranding,
+  recentTransactions,
+  weeklyStats,
+  dropdownData,
 } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
+import product9 from '../data/product9.jpg';
 
 const Ecommerce = () => {
   const { currentColor } = useStateContext();
@@ -118,9 +131,54 @@ const Ecommerce = () => {
             </div>
           </div>
         </div>
+
+        {/* Earning and Sales Section */}
+        <div>
+          <div
+            className=' rounded-2xl md:w-400 p-4 m-3'
+            style={{ backgroundColor: currentColor }}
+          >
+            <div className='flex justify-between items-center '>
+              <p className='font-semibold text-white text-2xl'>Earnings</p>
+              <div>
+                <p className='text-2xl text-white font-semibold mt-8'>
+                  $63,448.78
+                </p>
+                <p className='text-gray-200'>Monthly revenue</p>
+              </div>
+            </div>
+
+            <div className='mt-4'>
+              <SparkLine
+                currentColor={currentColor}
+                id='column-sparkLine'
+                height='100px'
+                type='Column'
+                data={SparklineAreaData}
+                width='320'
+                color='rgb(242, 252, 253)'
+              />
+            </div>
+          </div>
+          <div className="bg-white dark:text-gray-200 dark:bg-secondary-dark-bg rounded-2xl md:w-400 p-8 m-3 flex justify-center items-center gap-10">
+            <div>
+              <p className="text-2xl font-semibold ">$43,246</p>
+              <p className="text-gray-400">Yearly sales</p>
+            </div>
+
+            <div className="w-40">
+              <Pie id="pie-chart" data={ecomPieChartData} legendVisibility={false} height="160px" />
+            </div>
+          </div>
+        </div>
+
+        {/* Recent Transactions Section */}
+        <div>
+
+        </div>
+
       </div>
     </div>
   );
 };
-
 export default Ecommerce;
