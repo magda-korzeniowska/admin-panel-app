@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter as Router, Route, Routes } from 'react-router-dom';
 import { TooltipComponent } from '@syncfusion/ej2-react-popups';
 import { FiSettings } from 'react-icons/fi';
 
@@ -31,7 +31,7 @@ const App = () => {
 
   return (
     <div className={currentMode === 'Dark' ? 'dark' : ''}>
-      <BrowserRouter>
+      <Router>
         <div className='flex relative dark:bg-main-dark-bg'>
           <div className='fixed right-4 bottom-4 z-1000'>
             <TooltipComponent content='Settings' position='Top'>
@@ -95,7 +95,7 @@ const App = () => {
             </div>
           </div>
         </div>
-      </BrowserRouter>
+      </Router>
     </div>
   );
 };
