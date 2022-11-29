@@ -5600,3 +5600,24 @@ export const dropdownData = [
     Time: 'Nov 2022',
   },
 ];
+
+export const cartData = [
+  {
+    image: product5,
+    name: 'butterscotch ice-cream',
+    category: 'Milk product',
+    price: '$250',
+  },
+  {
+    image: product6,
+    name: 'Supreme fresh tomato',
+    category: 'Vegetable Item',
+    price: '$450',
+  },
+  {
+    image: product7,
+    name: 'Red color candy',
+    category: 'Food Item',
+    price: '$190',
+  },
+];
