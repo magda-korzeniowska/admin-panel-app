@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/admin-panel-app/static/css/main.d88aab69.css",
-    "main.js": "/admin-panel-app/static/js/main.23b9cce1.js",
+    "main.css": "/admin-panel-app/static/css/main.775c5e92.css",
+    "main.js": "/admin-panel-app/static/js/main.d07e9b6b.js",
     "static/media/product4.jpg": "/admin-panel-app/static/media/product4.767417bea17688d6d8ce.jpg",
     "static/media/product2.jpg": "/admin-panel-app/static/media/product2.e93f12ec1b20980a1bd1.jpg",
     "static/media/product1.jpg": "/admin-panel-app/static/media/product1.b8efc7a24c281ed8911b.jpg",
@@ -15,11 +15,11 @@
     "static/media/avatar4.jpg": "/admin-panel-app/static/media/avatar4.f56b774f77caaf2f6921.jpg",
     "static/media/product5.jpg": "/admin-panel-app/static/media/product5.f4c5d8f991b753ca0fcc.jpg",
     "index.html": "/admin-panel-app/index.html",
-    "main.d88aab69.css.map": "/admin-panel-app/static/css/main.d88aab69.css.map",
-    "main.23b9cce1.js.map": "/admin-panel-app/static/js/main.23b9cce1.js.map"
+    "main.775c5e92.css.map": "/admin-panel-app/static/css/main.775c5e92.css.map",
+    "main.d07e9b6b.js.map": "/admin-panel-app/static/js/main.d07e9b6b.js.map"
   },
   "entrypoints": [
-    "static/css/main.d88aab69.css",
-    "static/js/main.23b9cce1.js"
+    "static/css/main.775c5e92.css",
+    "static/js/main.d07e9b6b.js"
   ]
 }
