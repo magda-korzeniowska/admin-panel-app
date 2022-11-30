@@ -25,7 +25,11 @@ const Chat = () => {
             key={`chatData-${index}`}
             className='flex items-center leading-8 gap-5 border-b-1 border-color dark:border-gray-600 p-4'
           >
-            <img src={item.image} alt='' className='rounded-full h-14 w-14' />
+            <img
+              src={item.image}
+              alt={item.message}
+              className='rounded-full h-14 w-14'
+            />
             <div>
               <p className='font-semibold dark:text-gray-200'>{item.message}</p>
               <p className='text-gray-500 dark:text-gray-400 text-sm'>
