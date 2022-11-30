@@ -6,10 +6,16 @@ import { chatData } from '../data/dummy';
 import { useStateContext } from '../contexts/ContextProvider';
 
 const Notification = () => {
-  const { currentColor } = useStateContext();
+  const { currentColor, handleClick } = useStateContext();
   return (
-    <div className='fixed top-0 right-0 bg-half-transparent w-full nav-item flex items-center justify-center h-screen '>
-      <div className='bg-white dark:bg-[#42464D] p-8 rounded-lg w-96'>
+    <div
+      className='fixed top-0 right-0 bg-half-transparent w-full nav-item flex items-center justify-center h-screen'
+      onClick={handleClick}
+    >
+      <div
+        className='bg-white dark:bg-[#42464D] p-8 rounded-lg w-96'
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className='flex justify-between items-center'>
           <p className='font-semibold text-lg'>Notifications</p>
           <Button

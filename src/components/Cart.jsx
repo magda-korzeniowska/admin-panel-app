@@ -7,11 +7,17 @@ import { useStateContext } from '../contexts/ContextProvider';
 import { cartData } from '../data/dummy';
 
 const Cart = () => {
-  const { currentColor } = useStateContext();
+  const { currentColor, handleClick } = useStateContext();
 
   return (
-    <div className='fixed top-0 right-0 bg-half-transparent w-full nav-item'>
-      <div className='h-screen w-400 float-right duration-1000 ease-in-out dark:text-gray-200 transition-all dark:bg-[#484B52] bg-white md:w-400 p-8'>
+    <div
+      className='fixed top-0 right-0 bg-half-transparent w-full nav-item'
+      onClick={handleClick}
+    >
+      <div
+        className='h-screen w-400 float-right duration-1000 ease-in-out dark:text-gray-200 transition-all dark:bg-[#484B52] bg-white md:w-400 p-8'
+        onClick={(e) => e.stopPropagation()}
+      >
         <div className='flex justify-between items-center'>
           <p className='font-semibold text-lg'>Shopping Cart</p>
           <Button
