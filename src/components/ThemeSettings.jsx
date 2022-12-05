@@ -10,8 +10,8 @@ const ThemeSettings = () => {
   const { setColor, setMode, currentMode, currentColor, setThemeSettings } =
     useStateContext();
   return (
-    <div className='bg-half-transparent w-screen fixed nav-item top-0 right-0'>
-      <div className='float-right h-screen dark:text-gray-200  bg-white dark:bg-[#484B52] w-400'>
+    <div className='bg-half-transparent w-screen fixed nav-item top-0 right-0' onClick={() => setThemeSettings(false)}>
+      <div className='float-right h-screen dark:text-gray-200  bg-white dark:bg-[#484B52] w-400' onClick={(e) => e.stopPropagation()}>
         <div className='flex justify-between items-center p-4 ml-4'>
           <p className='font-semibold text-lg'>Settings</p>
           <button

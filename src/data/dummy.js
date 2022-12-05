@@ -2263,7 +2263,7 @@ export const scheduleData = [
   {
     Id: 2,
     Subject: 'Thule Air Crash Report',
-    Location: 'Newyork City',
+    Location: 'New York City',
     StartTime: '2022-10-11T06:30:00.000Z',
     EndTime: '2022-10-11T08:30:00.000Z',
     CategoryColor: '#357cd2',

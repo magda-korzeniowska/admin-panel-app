@@ -13,7 +13,7 @@ const Notification = () => {
       onClick={handleClick}
     >
       <div
-        className='bg-white dark:bg-[#42464D] p-8 rounded-lg w-96'
+        className='bg-white dark:bg-[#42464D] p-8 rounded-lg w-110'
         onClick={(e) => e.stopPropagation()}
       >
         <div className='flex justify-between items-center'>
